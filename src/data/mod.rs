@@ -1,0 +1,1 @@
+pub mod log_record; // The log_record module is public.
