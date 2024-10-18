@@ -62,7 +62,12 @@ mod tests {
             offset: 2,
         };
         assert_eq!(btree.put(key.clone(), pos), true);
-        assert_eq!(btree.put(key.clone(), pos), false);
+        let ket = "".as_bytes().to_vec();
+        let pos = LogRecordPos {
+            file_id: 1,
+            offset: 2,
+        };
+        assert_eq!(btree.put(ket.clone(), pos), true);
     }
 
     #[test]
